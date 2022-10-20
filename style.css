@@ -45,7 +45,7 @@
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: 100px;
 }
 
 /* Sidebar Styles */
@@ -67,7 +67,7 @@
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999999;
+    color: #c9c9c9;
 }
 
 .sidebar-nav li a:hover {
@@ -120,6 +120,6 @@
 
     #wrapper.toggled #page-content-wrapper {
         position: relative;
-        margin-right: 0;
+        margin-right: 40px;
     }
 }
