@@ -140,7 +140,7 @@
     text-align: center;
     text-decoration: none;
     margin: 20px 4px;
-    border-radius: 50%;
+    border-radius: 50% 40% 50% 40%;
   }
   
   .fa:hover {
