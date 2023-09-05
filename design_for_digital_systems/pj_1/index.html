@@ -8,6 +8,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     </head>
     <body>
+        <audio id="music" autoplay loop>
+            <source src="./src/rollin.m4a" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
         <div class="btn">
             <span class="fas fa-bars"></span>
         </div>
@@ -72,7 +76,22 @@
             <br>
             <a href="home.html"><button class="start_btn" role="button">START THE JOURNEY</button></a>
         </div>
+        <button id="music_btn" class="play-button">🎵</button>
         <script>
+            var music = document.getElementById("music");
+            var musicBtn = document.getElementById("music_btn");
+
+            musicBtn.addEventListener("click", function() {
+                if (music.paused) {
+                    music.play();
+                    musicBtn.textContent = "Pause Music";
+                } else {
+                    music.pause();
+                    musicBtn.textContent = "Play Music";
+                }
+            });
+
+
             $('.btn').click(function(){
               $(this).toggleClass("click");
               $('.sidebar').toggleClass("show");
