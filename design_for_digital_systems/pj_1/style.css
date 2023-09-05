@@ -441,7 +441,11 @@ span {
 
 }
 
-
+#music_btn {
+	position:fixed;
+	bottom: 20px;
+    right: 20px;
+}
 
 .play-button:hover {
   background-color: #fff;
