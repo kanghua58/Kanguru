@@ -88,7 +88,7 @@
 
 .sidebar-nav > .sidebar-brand {
     height: 60px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 60px;
     vertical-align: text-bottom;
 }
@@ -190,6 +190,7 @@ p,h1,h2,h3,h4,iframe,textarea {
 
 h1 {
     font-weight: 800;
+    font-size: 36px;
 }
 
 textarea{
@@ -197,8 +198,127 @@ textarea{
     height: 200px; 
     position:float; 
     border-color: white;
-    font-size: 13px;
+    font-size: 16px;
     font-family:'Karla', sans-serif;
 }
 
+.flexbox_container {
+    padding: 5px;
+    height: auto;
+    display:flex;
+    flex-wrap: wrap;
+    background-color:#f5f5f500;
+    justify-content: space-evenly;
+}
+
+.flexbox_item {
+    flex: 1 0 0;
+    margin: 10px;
+    padding: 10px;
+    background-color:#fdfdfd00;
+    color:rgb(26, 26, 26);
+    width: 350px;
+    height: auto;
+    min-width: 250px;
+}
+
+
+
+
+.image_container {
+    position: relative;
+    display: inline-block;
+	text-align: center;
+  }
+  
+.hover_text {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(43, 80, 104, 0.934); /* Semi-transparent background color */
+	color: white;
+	padding: 10px;
+	font-size: 15px;
+	opacity: 0; /* Initially hidden */
+	transition: opacity 0.3s; /* Smooth transition */
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	text-align: left;
+	z-index: 9999;
+}
+
+.image_container:hover .hover_text {
+	opacity: 1; /* Display the text on hover */
+}
+
+.image_container img {
+	width:100%;
+	height:auto;
+}
+
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+
+
+.content {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #202020;
+	z-index: -1;
+	text-align: center;
+}
+
+.content .header {
+	font-size: 40px;
+	font-weight: 900;
+}
+
+.content p {
+	font-size: 20px;
+	font-weight: 500;
+	margin-top: 10px;
+	color:#A45555
+}
+
+.content_flex_container {
+	height: auto;
+    display:flex;
+    flex-wrap: wrap;
+    background-color:#e0ebf7;
+    justify-content: space-evenly;
+}
+
+.content_flex_container_test {
+	height: auto;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.flex_content {
+	width:60%;
+	padding: 10px !important;
+	margin:30px !important;
+}
+
+.flex_navibar {
+	position: fixed;
+	top: 300px;
+	right: 20px; 
+	transform: translateY(-50%); 
+	width: 300px; 
+	height: 300px; 
+	text-align: right;
+	padding: 10px !important;
+	margin:100px 30px 30px 30px !important;
+	line-height: 165%;
+}
 
