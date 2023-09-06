@@ -37,9 +37,9 @@
 }
 
 #page-content-wrapper {
-    width: 90%;
+    width: 80%;
     position: absolute;
-    padding: 50px;
+    padding: 20px;
 }
 
 #wrapper.toggled #page-content-wrapper {
@@ -322,3 +322,13 @@ textarea{
 	line-height: 165%;
 }
 
+
+a:link, a:visited {
+	color: #5578A4;
+	text-decoration: none;
+}
+
+
+a:active {
+	color: #A45555;
+}
