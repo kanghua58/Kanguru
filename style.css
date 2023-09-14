@@ -352,10 +352,14 @@ a:active {
 .card-container .card a:hover .card--hover {
     display: block;
 }
+
 .card-container .card a .card--display i {
     font-size: 22px;
     margin-left: 10px;
+	font-family: "Titan One";
+	font-style: normal;
 }
+
 .card-container .card a .card--display h2 {
     margin-top: 10px;
 	font-size: 18px;
