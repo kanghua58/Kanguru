@@ -5,7 +5,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	user-select: none;
 	box-sizing: border-box;
 	font-family: 'Karla', sans-serif;
 }
@@ -21,6 +20,10 @@
 	border-radius: 3px;
 	cursor: pointer;
 	transition: left 0.4s ease;
+}
+
+h1, h2, h3 {
+	line-height:1.7em;
 }
 
 .btn.click {
@@ -231,10 +234,6 @@ nav ul li a span.rotate {
 	font-family: "Karla";
 
 	border: 0;
-
-	user-select: none;
-	-webkit-user-select: none;
-	touch-action: manipulation;
 }
 
 .start_btn:hover,
@@ -266,7 +265,7 @@ a:active {
     margin-right: 10%;
     padding: 20px;
     line-height: 165%;
-	max-width: 700px;
+	max-width: 1200px;
 }
 
 .content_area p {
@@ -473,4 +472,95 @@ span {
 	padding-top: 20px;
 	padding-bottom: 10px;
 	color:#A45555;
+}
+
+
+
+/* newly added card funtion for hovering */
+
+.card-container {
+	display: flex;
+	flex-wrap: wrap;
+    flex: 800px;
+    margin: 40px 20px 20px 0;
+}
+.card-container .card {
+	margin: 20px;
+	min-width: 300px;
+    font-weight: bold;
+    position: relative;
+    width: 30%;
+	height:300px;
+}
+.card-container .card a {
+    padding: 40px 30px;
+    width: 100%;
+    height:300px;
+    border: 2px solid black;
+    background: white;
+    text-decoration: none;
+    color: black;
+    display: block;
+    transition: 0.25s ease;
+}
+.card-container .card a:hover {
+	padding-top: 10px;
+    transform: translate(-30px, -30px);
+	height:max-content;
+    border-color: #5578A4;
+}
+
+.card-container .card a:hover .card--display {
+    display: none;
+}
+.card-container .card a:hover .card--hover {
+    display: block;
+}
+.card-container .card a .card--display i {
+    font-size: 24px;
+    margin-top: 200px;
+}
+.card-container .card a .card--display h2 {
+    margin: 20px 0 0;
+	font-size: 20px;
+	font-weight: 300;
+}
+.card-container .card a .card--hover {
+    display: none;
+}
+.card-container .card a .card--hover h2 {
+    margin: 20px 0;
+}
+.card-container .card a .card--hover p {
+    font-weight: normal;
+    line-height: 1.5;
+}
+.card-container .card a .card--hover p.link {
+    margin: 20px 0 0;
+    font-weight: bold;
+    color: #5578A4;
+}
+.card-container .card .card--border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border: 2px dashed black;
+    z-index: -1;
+}
+.card-container .card.card--dark a {
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+.card-container .card.card--dark a .card--hover .link {
+    color: #fde74c;
+}
+
+.lecture {
+	background-color: #bac6d6 !important;
+}
+.test {
+	background-color: #d4b5b5 !important;
 }
