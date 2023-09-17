@@ -482,7 +482,7 @@ span {
 	display: flex;
 	flex-wrap: wrap;
     flex: 800px;
-    margin: 40px 20px 20px 0;
+    margin: 40px 20px 20px -20px;
 }
 .card-container .card {
 	margin: 20px;
@@ -496,7 +496,7 @@ span {
     padding: 40px 30px;
     width: 100%;
     height:300px;
-    border: 2px solid black;
+    border: 2px solid #1c1c1c;
     background: white;
     text-decoration: none;
     color: black;
@@ -507,7 +507,7 @@ span {
 	padding-top: 10px;
     transform: translate(-30px, -30px);
 	height:max-content;
-    border-color: #5578A4;
+    border-color: #1c1c1c;
 }
 
 .card-container .card a:hover .card--display {
@@ -519,7 +519,8 @@ span {
 .card-container .card a .card--display i {
     font-size: 24px;
     margin-top: 200px;
-	font-family: "Titan One";
+	font-family: "Karla";
+	font-weight: 900;
 	font-style: normal;
 }
 .card-container .card a .card--display h2 {
@@ -551,14 +552,7 @@ span {
     border: 2px dashed black;
     z-index: -1;
 }
-.card-container .card.card--dark a {
-    color: white;
-    background-color: black;
-    border-color: black;
-}
-.card-container .card.card--dark a .card--hover .link {
-    color: #fde74c;
-}
+
 
 .lecture {
 	background-color: #bac6d6 !important;

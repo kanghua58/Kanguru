@@ -182,15 +182,13 @@
   }
 
 p,h1,h2,h3,h4,iframe,textarea {
-    text-align: justify;
+    text-align: left;
     line-height: 140%;
-    padding-left: 20px;
-    padding-bottom: 10px;
     font-family:'Karla', sans-serif;
 }
 
 h1 {
-    text-align: justify;
+    text-align: left;
     line-height: 100%;
     font-weight: 800;
     font-size: 36px;
@@ -304,11 +302,9 @@ a:active {
 }
 
 .content_area {
-    margin: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 30px;
     padding: 20px;
-    line-height: 165%;
+    line-height: 150%;
 	max-width: 1200px;
 }
 
@@ -319,32 +315,36 @@ a:active {
 	display: flex;
 	flex-wrap: wrap;
     flex: 800px;
-    margin: 40px 20px 20px 0;
+    margin: 40px 20px 20px -20px;
 }
+
 .card-container .card {
-	margin: 20px;
-	min-width: 300px;
+	margin:20px; 
+    margin-right:50px;
+    width:300px;
     font-weight: bold;
-    position: relative;
+    position: flex;
     width: 30%;
 	height:300px;
+    padding:10px;
 }
+
 .card-container .card a {
     padding: 40px 30px;
     width: 100%;
-    height:300px;
-    border: 2px solid black;
+    min-height:200px;
+    border: 2px solid #1c1c1c;
     background: white;
     text-decoration: none;
     color: black;
-    display: block;
+    display:block;
     transition: 0.25s ease;
 }
 .card-container .card a:hover {
 	padding-top: 10px;
-    transform: translate(-30px, -30px);
+    transform: translate(-30px, -20px);
 	height:max-content;
-    border-color: #5578A4;
+    border-color: #1c1c1c;
 }
 
 .card-container .card a:hover .card--display {
@@ -356,8 +356,9 @@ a:active {
 
 .card-container .card a .card--display i {
     font-size: 22px;
-    margin-left: 10px;
-	font-family: "Titan One";
+    margin-left: 20px;
+	font-family: "Karla";
+    font-weight:900;
 	font-style: normal;
 }
 
@@ -391,26 +392,9 @@ a:active {
     position: absolute;
     width: 100%;
     height: 100%;
-    left: 0;
-    top: 0;
-    border: 2px dashed black;
     z-index: -1;
 }
-.card-container .card.card--dark a {
-    color: white;
-    background-color: black;
-    border-color: black;
-}
-.card-container .card.card--dark a .card--hover .link {
-    color: #fde74c;
-}
 
-.lecture {
-	background-color: #bac6d6 !important;
-}
-.test {
-	background-color: #d4b5b5 !important;
-}
 
 .project{ 
 	background-color: #ffc01f;
