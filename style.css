@@ -384,8 +384,9 @@ a:active {
 .card-container .card a .card--hover p.link {
     margin: 20px 0 0;
     font-weight: bold;
-    color: #1a1a1a;
+    color: #5578A4;
 }
+
 .card-container .card .card--border {
     position: absolute;
     width: 100%;
