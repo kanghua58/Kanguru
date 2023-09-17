@@ -98,7 +98,7 @@ nav ul li.active a {
 	border-left-color: #A45555;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav ul ul li a:focus {
 	background: #c4c4c488;
 }
 
@@ -136,7 +136,7 @@ nav ul li.active ul li a {
 	border-left-color: transparent;
 }
 
-nav ul ul li a:hover {
+nav ul ul li a:hover, nav ul ul li a:focus {
 	color: #faf5f5 !important;
 	background: #A45555 !important;
 }
@@ -503,17 +503,17 @@ span {
     display: block;
     transition: 0.25s ease;
 }
-.card-container .card a:hover {
+.card-container .card a:hover, .card-container .card a:focus {
 	padding-top: 10px;
     transform: translate(-30px, -30px);
 	height:max-content;
     border-color: #1c1c1c;
 }
 
-.card-container .card a:hover .card--display {
+.card-container .card a:hover .card--display, .card-container .card a:focus .card--display {
     display: none;
 }
-.card-container .card a:hover .card--hover {
+.card-container .card a:hover .card--hover, .card-container .card a:focus .card--hover {
     display: block;
 }
 .card-container .card a .card--display i {
