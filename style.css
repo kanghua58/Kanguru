@@ -5,7 +5,13 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-size: 1.1rem;
 }
+
+html {
+    background-color: #e5dcdc;
+}
+
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -24,14 +30,14 @@
 }
 
 #sidebar-wrapper {
-    z-index: 1000;
+    z-index: 100;
     position: fixed;
     left: 250px;
     width: 0;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: rgb(0, 0, 0);
+    background: rgb(40, 40, 40);
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -58,20 +64,20 @@
 .sidebar-nav {
     position: absolute;
     top: 20px;
-    width: 250px;
+    width: 300px;
+    height:100%;
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: justify;
-    line-height: 140%;
-    padding-left: 20px;
-    padding-bottom: 10px;
+    line-height: 200%;
     font-family:'Karla', sans-serif;
 }
 
 .sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
+    display: block;
+    text-indent: 30px;
+    line-height: 50px;
 }
 
 .sidebar-nav li a {
@@ -147,50 +153,37 @@
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding: 15px;
-    font-size: 10px;
-    width: 15px;
+    padding: 16px;
+    font-size: 8px;
+    width: 50px;
+    height: 50px;
     text-align: center;
     text-decoration: none;
     margin: 20px 4px;
-    border-radius: 50% 30% 50% 30%;
+    border-radius: 40%;
   }
   
   .fa:hover {
       opacity: 0.7;
   }
   
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  
-  
-  .fa-linkedin {
-    background: #007bb5;
-    color: white;
-  }
-  
-  .fa-youtube {
-    background: #bb0000;
-    color: white;
-  }
-  
-  .fa-instagram {
-    background: #125688;
+  .fa-twitter, .fa-linkedin, .fa-youtube {
+    background: #e5dcdc;
     color: white;
   }
 
-p,h1,h2,h3,h4,iframe,textarea {
+
+p,h1,h2,h3,h4,iframe,textarea .page-content-wrapper *{
+    margin: 20px;
     text-align: left;
     line-height: 140%;
     font-family:'Karla', sans-serif;
 }
+
+p {
+    margin-top: 40px;
+}
+
 
 h1 {
     text-align: left;
@@ -310,13 +303,14 @@ a:active {
     margin-left: 30px;
     padding: 20px;
     line-height: 150%;
-	max-width: 1200px;
+	max-width: 70%;
 }
 
 
 /* newly added card funtion for hovering */
 
 .card-container {
+	display: flex;
 	flex-wrap: wrap;
     flex: 800px;
     margin: 40px 20px 20px -20px;
@@ -336,7 +330,7 @@ a:active {
     width: 100%;
     min-height:200px;
     border: 2px solid #1c1c1c;
-    background: white;
+    background: #e2dbdb;
     text-decoration: none;
     color: black;
     display:block;
@@ -358,7 +352,7 @@ a:active {
 
 .card-container .card a .card--display i {
     font-size: 22px;
-    margin-left: 10px;
+    margin-left: 20px;
 	font-family: "Karla";
     font-weight:900;
 	font-style: normal;
@@ -399,5 +393,5 @@ a:active {
 
 
 .project{ 
-	background-color: #ffc01f;
+	background-color: rgb(40,40,40);
 }
