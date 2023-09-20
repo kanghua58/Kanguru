@@ -1,0 +1,204 @@
+/* clear css */
+* {
+    padding:0;
+    margin:0;
+    font-family: 'Karla';
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    display:block;
+    max-width: 100%;
+    height:auto;
+}
+
+/* utility classes */
+.nowrap {
+    white-space: nowrap;
+}
+
+/* general styles */
+body {
+    font: 1.5rem 'Karla', sans-serif;
+    min-height:100vh;
+    background-color: #475569;
+    background-image: radial-gradient(whitesmoke,#475569);
+    display: flex;
+    flex-direction: column;
+}
+
+
+header, footer {
+    position: sticky;
+    background-color: #1E293B;
+    color:whitesmoke;
+    text-align: center;
+}
+
+
+header {
+    top:0;
+}
+
+nav {
+    background-color: #fff;
+    padding: 0.5rem;
+    border-bottom: 2px, solid, black;
+    font-weight: 400;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+
+nav a, nav a:visited {
+    color: black;
+    min-width: 120px;
+}
+
+nav a:hover, nav a:active, nav a:focus {
+    color: hsla(0, 0%, 20%, 0.6);
+}
+
+main {
+    /* fill out the whole row */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1.5rem;
+    padding: 1rem;
+}
+
+footer {
+    bottom:0;
+}
+
+
+
+/* profile card */
+.card {
+    scroll-margin-top: 8rem;
+    width: minmax(100%,350px);
+    background-color:hsla(0, 0%, 100%, 0.2);
+    border-radius: 15px;
+    padding: 1rem;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+
+.card figure {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.card img {
+    border: 10px double #353535;
+    border-radius: 50%;
+}
+
+.card figcaption {
+    font-weight:bolder;
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+
+}
+
+
+/* 惯例是从小屏幕向大屏幕写 */
+/* min-width： starting from */
+
+/* orientation： 1landscape */
+/* min-aspect-ratio: 7/4 */
+
+/* || small */
+@media screen and (min-width: 567px) {
+    body {
+        background-color: green;
+        background-image: radial-gradient(whitesmoke, green);
+    }   
+
+    main {
+        justify-content: center;
+        flex-flow: row wrap;
+        padding: 1rem;
+    }
+    .card {
+        width: minmax(100%, 400px);
+    }
+    .card:last-child{
+        order:-1;
+    }
+
+    .card:nth-child(5){
+        order:-2;
+    }
+} 
+
+
+
+/* || mediem */
+@media screen and (min-width: 768px) {
+    body {
+        background-color: gold;
+        background-image: radial-gradient(whitesmoke, gold);
+    }  
+    
+    nav {
+        display:none; 
+        /* should be able to navigate without scrolling, so nav no longer necessary */
+    }
+
+    .card {
+        width: min(100%, 325px);
+    }
+
+    .card figure {
+        flex-flow: column-reverse;
+    }
+
+    .card figcaption {
+        margin: 0 0.1em 0;
+    }
+
+    .card p {
+        margin-top: 1rem;
+    }
+
+    .card img {
+        margin-top: 10px;
+    }
+
+
+}
+
+/* || large */
+@media screen and (min-width: 992px) {
+    body {
+        background-color: firebrick;
+        background-image: radial-gradient(whitesmoke, firebrick);
+    }   
+
+    .card {
+        width: min(30%, 450px)
+    }
+}
+
+/* || extra large */
+@media screen and (min-width: 1200px) {
+    body {
+        background-color: rebeccapurple;
+        background-image: radial-gradient(whitesmoke, rebeccapurple);
+    }   
+
+    .card {
+        width: min(30%, 450px)
+    }
+}
