@@ -54,7 +54,7 @@ nav {
     border-bottom: 2px, solid, black;
     font-weight: 400;
     display:flex;
-    justify-content: space-evenly;
+    justify-content:flex-start;
     flex-wrap: wrap;
 
 }
@@ -62,7 +62,7 @@ nav {
 
 nav a, nav a:visited {
     color: black;
-    min-width: 120px;
+    width: 20%;
 }
 
 nav a:hover, nav a:active, nav a:focus {
@@ -155,10 +155,6 @@ footer {
         background-image: radial-gradient(whitesmoke, gold);
     }  
     
-    nav {
-        display:none; 
-        /* should be able to navigate without scrolling, so nav no longer necessary */
-    }
 
     .card {
         width: min(100%, 325px);
