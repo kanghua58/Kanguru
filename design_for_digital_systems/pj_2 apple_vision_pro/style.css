@@ -8,6 +8,10 @@
   line-height: 1.4em;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
 img {
   display: block;
   max-width: 100%;
@@ -1389,6 +1393,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
 .footer-location {
   float: right;
   margin-top: 3px;
+  margin-bottom: 15px;
 }
 
 .footer-location a {
