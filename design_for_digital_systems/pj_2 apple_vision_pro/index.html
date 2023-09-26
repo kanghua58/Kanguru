@@ -1,3 +1,18 @@
+<!-- 
+TO-DO list
+  1. Control Button of Videos
+  2. Animation as scrolling down on a video/image
+  3. Header Menu Contents
+
+Bugs
+  1. Sticky Action Banner not work after page 2
+
+
+ -->
+
+
+ <!-- Start of HTML codes -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -162,7 +177,7 @@
 
     <main>
         <div id="main">
-
+            
             <div id="page">
                 <video src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/hero/large_2x.mp4" muted ></video>
                 <div id="page-bottom">
@@ -176,12 +191,16 @@
                 <div class="overlay-video"></div>
                 <h1>Welcome to the era of <br> spatial computing.</h1>
             </div>
+          
             
             <div id="page2">
                 <video src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/foundation-digital-canvas/large.mp4" autoplay loop muted ></video>
                 <div class="overlay-video"></div>
                 <h1>Apple Vision Pro seamlessly blends <br> digital content with your physical space.</h1>
             </div>
+
+            
+
             <div id="page3">
                 <!-- <h1>You’ve never seen everything like this before.</h1> -->
                 <div id="page3-upper">
@@ -226,21 +245,68 @@
                         <br>
                         Wherever you are.</h1>
             </div>
-        </div>
+          </div>
 
         
-       <div id="page-a4">
-        <div class="left-a4">
-            <h1>An immersive way<br>to experience <br>entertainment.</h1>
+          <div id="page-a4">
+            <div class="left-a4">
+                <h1>An immersive way<br>to experience <br>entertainment.</h1>
+            </div>
+            <div class="right-a4">
+                <h3>With Vision Pro, you have an infinite canvas that transforms how you use the apps you love. Arrange apps anywhere and scale them to the perfect size, making the workspace of your dreams a reality — all while staying present in the world around you. Browse the web in Safari, create a to-do list in Notes, chat in Messages, and seamlessly move between them with a glance.</h3>
+                <button class="button-2"> + Learn more about entertainment</button>
+            </div>
+          </div>
+
+
+          <!-- Photos and Videos -->
+          <div id="page-a5">
+          <video src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/experience-photos-videos/large.mp4" autoplay loop muted></video>
+          <div class="overlay-video"></div>
+          <div id="center-page-a5">
+              <h5>Photos and Videos</h5>
+                  <h1>Be in the moment.
+                      <br>
+                      All over again.</h1>
+          </div>
         </div>
-        <div class="right-a4">
-            <h3>With Vision Pro, you have an infinite canvas that transforms how you use the apps you love. Arrange apps anywhere and scale them to the perfect size, making the workspace of your dreams a reality — all while staying present in the world around you. Browse the web in Safari, create a to-do list in Notes, chat in Messages, and seamlessly move between them with a glance.</h3>
-            <button class="button-2"> + Learn more about entertainment</button>
+
+      
+        <div id="page-a6">
+          <div class="left-a6">
+              <h1>Your memories<br>come alive.</h1>
+          </div>
+          <div class="right-a6">
+              <h3>Apple Vision Pro is Apple’s first 3D camera. You can capture magical spatial photos and spatial videos in 3D, then relive those cherished moments like never before with immersive Spatial Audio. Your existing library of photos and videos looks incredible at remarkable scale. And panoramas wrap around you — making you feel like you’re standing right where you took them. You can also take spatial videos with iPhone 15 Pro, then view them on Apple Vision Pro.</h3>
+              <button class="button-2"> + Learn more about photos and videos</button>
+          </div>
         </div>
-       </div>
+
+        <!-- Connection -->
+        <div id="page-a7">
+          <video src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/experience-connection/large.mp4" autoplay loop muted></video>
+          <div class="overlay-video"></div>
+          <div id="center-page-a5">
+              <h5>Connection</h5>
+                  <h1>Get on the same page.
+                      <br>
+                      In the same space.</h1>
+          </div>
+        </div>
+
+      
+        <div id="page-a8">
+          <div class="left-a8">
+              <h1>YMake meetings<br> more meaningful.</h1>
+          </div>
+          <div class="right-a8">
+              <h3>Apple Vision Pro makes it easy to collaborate and connect wherever you are. FaceTime video tiles are life-size, and as new people join, the call simply expands in your room. Within FaceTime, you can also use apps to collaborate with colleagues on the same documents simultaneously.</h3>
+              <button class="button-2"> + Learn more about c</button>
+          </div>
+        </div>
 
 
-
+         <!-- Start of Vision Feature Animation -->
 
            <div id="page6">
             <h3>Design</h3>
@@ -274,6 +340,10 @@
             <h1>
                 <span>EyeSight.</span> An outward display reveals your eyes while wearing Vision Pro, letting others know when you are using apps or fully immersed.</h1>
            </div>
+
+
+           <!-- End of Vision Feature Animation -->
+
            <div id="page14">
             <div class="left14"></div>
             <div class="right14"></div>
@@ -355,9 +425,15 @@
             <p><span>Pushing boundaries from the inside out.</span> Spatial experiences on Vision Pro are only possible through groundbreaking Apple technology. Displays the size of a postage stamp that deliver more pixels than a 4K TV to each eye. Incredible advances in Spatial Audio. A revolutionary dual‑chip design featuring custom Apple silicon. A sophisticated array of cameras and sensors. All the elements work together to create an unprecedented experience you have to see to believe.
             </p>
            </div>
-           <div id="page18">
+
+           <!-- Start of unresolved animation on page18 -->
+
+           <!-- <div id="page18">
             <canvas></canvas>
-           </div>
+           </div> -->
+
+           <!-- End of animation on page18 -->
+
            <div id="page19">
             <h2>More pixels than a 4K TV. For each eye.</h2>
             <h5>The <span>custom micro‑OLED display system</span> features 23 million pixels, delivering stunning resolution and colors. And a specially designed three‑element lens creates the feeling of a display that’s everywhere you look.</h5>
