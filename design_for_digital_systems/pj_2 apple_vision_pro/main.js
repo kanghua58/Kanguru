@@ -482,31 +482,31 @@ render();
 
 function files(index) {
 var data = `
-.//Apple vision canvas images/Vision00001.png
-.//Apple vision canvas images/Vision00002.png
-.//Apple vision canvas images/Vision00003.png
-.//Apple vision canvas images/Vision00004.png
-.//Apple vision canvas images/Vision00005.png
-.//Apple vision canvas images/Vision00006.png
-.//Apple vision canvas images/Vision00007.png
-.//Apple vision canvas images/Vision00008.png
-.//Apple vision canvas images/Vision00009.png
-.//Apple vision canvas images/Vision00010.png
-.//Apple vision canvas images/Vision00011.png
-.//Apple vision canvas images/Vision00012.png
-.//Apple vision canvas images/Vision00013.png
-.//Apple vision canvas images/Vision00014.png
-.//Apple vision canvas images/Vision00015.png
-.//Apple vision canvas images/Vision00016.png
-.//Apple vision canvas images/Vision00017.png
-.//Apple vision canvas images/Vision00018.png
-.//Apple vision canvas images/Vision00019.png
-.//Apple vision canvas images/Vision00020.png
-.//Apple vision canvas images/Vision00021.png
-.//Apple vision canvas images/Vision00022.png
-.//Apple vision canvas images/Vision00023.png
-.//Apple vision canvas images/Vision00024.png
-.//Apple vision canvas images/Vision00025.png
+.//images/Vision00001.png
+.//images/Vision00002.png
+.//images/Vision00003.png
+.//images/Vision00004.png
+.//images/Vision00005.png
+.//images/Vision00006.png
+.//images/Vision00007.png
+.//images/Vision00008.png
+.//images/Vision00009.png
+.//images/Vision00010.png
+.//images/Vision00011.png
+.//images/Vision00012.png
+.//images/Vision00013.png
+.//images/Vision00014.png
+.//images/Vision00015.png
+.//images/Vision00016.png
+.//images/Vision00017.png
+.//images/Vision00018.png
+.//images/Vision00019.png
+.//images/Vision00020.png
+.//images/Vision00021.png
+.//images/Vision00022.png
+.//images/Vision00023.png
+.//images/Vision00024.png
+.//images/Vision00025.png
 `;
 return data.split("\n")[index];
 }
