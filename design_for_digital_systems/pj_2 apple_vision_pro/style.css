@@ -634,7 +634,7 @@ h1 {
 
 #page > video {
   height: 100%;
-  width: 140%;
+  width: 100%;
   object-fit: cover;
   position: absolute;
   left: 50%;
@@ -822,7 +822,7 @@ h1 {
   background-color: var(--BG_L);
   display: flex;
   position: relative;
-  height: 40vh;
+  height: 50vh;
   width: 100vw;
 }
 .left5 {
@@ -1288,15 +1288,14 @@ h1 {
 }
 #page23 {
   position: relative;
-  height: 100vh;
+  height: 120vh;
   width: 100vw;
   background-color: #000;
 }
 #page23 > img {
-  height: 50%;
+  height: 60%;
   width: 100%;
   object-fit: cover;
-  opacity: 0;
 }
 
 #page23 > button {
@@ -1633,7 +1632,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   background-color: var(--BG_L);
   display: flex;
   position: relative;
-  height: 40vh;
+  height: 50vh;
   width: 100vw;
 }
 
