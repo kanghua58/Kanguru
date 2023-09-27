@@ -1501,8 +1501,6 @@ input[type="checkbox"]:checked + .col-section h3::after {
 
 /* Carousel Between Page 16 and 17 */
 
-@charset "UTF-8";
-
 #page-a1 {
   background-color: var(--BG_L);
   display: flex;
@@ -1829,14 +1827,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   position: fixed;
   top: -9999px;
 }
-[data-am-fadeshow] input[type="radio"]:checked {
-  /* This loop handles the slide switching and quick navigation active state */
-  /* Hide navigation if only one slide */
-}
-[data-am-fadeshow] input[type="radio"]:checked:nth-of-type(5) {
-  /* Show slide */
-  /* Add active state to dot */
-}
+
 [data-am-fadeshow]
   input[type="radio"]:checked:nth-of-type(5)
   ~ .fs-slides
@@ -1872,10 +1863,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   .fs-quick-btn:nth-child(5):hover {
   opacity: 1;
 }
-[data-am-fadeshow] input[type="radio"]:checked:nth-of-type(4) {
-  /* Show slide */
-  /* Add active state to dot */
-}
+
 [data-am-fadeshow]
   input[type="radio"]:checked:nth-of-type(4)
   ~ .fs-slides
@@ -1911,10 +1899,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   .fs-quick-btn:nth-child(4):hover {
   opacity: 1;
 }
-[data-am-fadeshow] input[type="radio"]:checked:nth-of-type(3) {
-  /* Show slide */
-  /* Add active state to dot */
-}
+
 [data-am-fadeshow]
   input[type="radio"]:checked:nth-of-type(3)
   ~ .fs-slides
@@ -1950,10 +1935,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   .fs-quick-btn:nth-child(3):hover {
   opacity: 1;
 }
-[data-am-fadeshow] input[type="radio"]:checked:nth-of-type(2) {
-  /* Show slide */
-  /* Add active state to dot */
-}
+
 [data-am-fadeshow]
   input[type="radio"]:checked:nth-of-type(2)
   ~ .fs-slides
@@ -1989,10 +1971,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   .fs-quick-btn:nth-child(2):hover {
   opacity: 1;
 }
-[data-am-fadeshow] input[type="radio"]:checked:nth-of-type(1) {
-  /* Show slide */
-  /* Add active state to dot */
-}
+
 [data-am-fadeshow]
   input[type="radio"]:checked:nth-of-type(1)
   ~ .fs-slides
@@ -2045,22 +2024,6 @@ input[type="checkbox"]:checked + .col-section h3::after {
   transform: translateX(0);
 }
 
-/*
- * ===== PREV/NEXT NAVIGATION =====
- *
- * This section handles the prev/next navigation.
- */
-/* Handle Prev/Next buttons */
-[data-am-fadeshow~="next-prev-navigation"] {
-  /* Display first pair of Prev/Next Buttons on load */
-}
-[data-am-fadeshow~="next-prev-navigation"]
-  input[type="radio"]:checked:nth-of-type(5) {
-  /* Show previous button */
-  /* Show next button */
-  /* Show last prev button if first slide */
-  /* Show first next button if last slide */
-}
 [data-am-fadeshow~="next-prev-navigation"]
   input[type="radio"]:checked:nth-of-type(5)
   ~ .fs-prev-nav
@@ -2085,13 +2048,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   .fs-next-btn:first-child {
   display: block;
 }
-[data-am-fadeshow~="next-prev-navigation"]
-  input[type="radio"]:checked:nth-of-type(4) {
-  /* Show previous button */
-  /* Show next button */
-  /* Show last prev button if first slide */
-  /* Show first next button if last slide */
-}
+
 [data-am-fadeshow~="next-prev-navigation"]
   input[type="radio"]:checked:nth-of-type(4)
   ~ .fs-prev-nav
@@ -2128,13 +2085,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   .fs-next-btn:first-child {
   display: block;
 }
-[data-am-fadeshow~="next-prev-navigation"]
-  input[type="radio"]:checked:nth-of-type(3) {
-  /* Show previous button */
-  /* Show next button */
-  /* Show last prev button if first slide */
-  /* Show first next button if last slide */
-}
+
 [data-am-fadeshow~="next-prev-navigation"]
   input[type="radio"]:checked:nth-of-type(3)
   ~ .fs-prev-nav
@@ -2171,13 +2122,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   .fs-next-btn:first-child {
   display: block;
 }
-[data-am-fadeshow~="next-prev-navigation"]
-  input[type="radio"]:checked:nth-of-type(2) {
-  /* Show previous button */
-  /* Show next button */
-  /* Show last prev button if first slide */
-  /* Show first next button if last slide */
-}
+
 [data-am-fadeshow~="next-prev-navigation"]
   input[type="radio"]:checked:nth-of-type(2)
   ~ .fs-prev-nav
@@ -2214,13 +2159,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   .fs-next-btn:first-child {
   display: block;
 }
-[data-am-fadeshow~="next-prev-navigation"]
-  input[type="radio"]:checked:nth-of-type(1) {
-  /* Show previous button */
-  /* Show next button */
-  /* Show last prev button if first slide */
-  /* Show first next button if last slide */
-}
+
 [data-am-fadeshow~="next-prev-navigation"]
   input[type="radio"]:checked:nth-of-type(1)
   ~ .fs-next-nav
@@ -2311,11 +2250,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
     opacity: 0;
   }
 }
-[data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(5):last-of-type {
-  /* Slide animation */
-  /* Quick navigation animation */
-  /* Animation Delay */
-}
+
 [data-am-fadeshow~="autoplay"]
   input[type="radio"]:nth-of-type(5):last-of-type
   ~ .fs-slides
@@ -2438,11 +2373,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
     opacity: 0;
   }
 }
-[data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(4):last-of-type {
-  /* Slide animation */
-  /* Quick navigation animation */
-  /* Animation Delay */
-}
+
 [data-am-fadeshow~="autoplay"]
   input[type="radio"]:nth-of-type(4):last-of-type
   ~ .fs-slides
@@ -2554,11 +2485,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
     opacity: 0;
   }
 }
-[data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(3):last-of-type {
-  /* Slide animation */
-  /* Quick navigation animation */
-  /* Animation Delay */
-}
+
 [data-am-fadeshow~="autoplay"]
   input[type="radio"]:nth-of-type(3):last-of-type
   ~ .fs-slides
@@ -2659,11 +2586,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
     opacity: 0;
   }
 }
-[data-am-fadeshow~="autoplay"] input[type="radio"]:nth-of-type(2):last-of-type {
-  /* Slide animation */
-  /* Quick navigation animation */
-  /* Animation Delay */
-}
+
 [data-am-fadeshow~="autoplay"]
   input[type="radio"]:nth-of-type(2):last-of-type
   ~ .fs-slides
