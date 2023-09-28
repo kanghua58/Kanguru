@@ -445,9 +445,9 @@ nav .desktop-nav li a:hover {
   position: sticky;
   top: 0px;
   z-index: 500;
-  background-color: rgba(51, 51, 51, 0);
+  background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
-  padding: 0px 20px;
+  padding: 0px 10px;
   top: 0;
   left: 0;
   top: 0;
@@ -457,7 +457,7 @@ nav .desktop-nav li a:hover {
 .banner-container {
   max-width: 1000px;
   margin: 0px auto;
-  padding: 15px 8px 15px 8px;
+  padding: 8px;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -468,7 +468,7 @@ nav .desktop-nav li a:hover {
 }
 
 .action-banner .product-name {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   color: var(--FC_D);
   text-align: left;
@@ -476,21 +476,20 @@ nav .desktop-nav li a:hover {
 
 .button-1 {
   max-width: 100px;
-  border-radius: 50%;
   appearance: none;
-  border: 2px solid #1a1a1a00;
+  border: 1px solid var(--FC_L);
   border-radius: 2em;
   box-sizing: border-box;
   background-color: var(--BG_L);
   color: var(--FC_L);
   cursor: pointer;
   font-size: 14px;
-  font-weight: 400;
-  line-height: normal;
+  font-weight: 600;
+  line-height: 1.6;
   margin: 0;
   min-height: 20px;
   outline: none;
-  padding: 5px 5px;
+  padding: 3px 5px;
   text-align: center;
   text-decoration: none;
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -510,6 +509,7 @@ nav .desktop-nav li a:hover {
   background-color: var(--BG_D2);
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
+  transition: 0.5s;
 }
 
 .button-1:active {
@@ -567,6 +567,7 @@ nav .desktop-nav li a:hover {
 
 .button-3 {
   align-items: center;
+  border: 1px solid var(--FC_D);
   background-clip: padding-box;
   background-color: #ffffff;
   border-radius: 50px;
@@ -589,7 +590,7 @@ nav .desktop-nav li a:hover {
   vertical-align: baseline;
   width: auto;
   padding: 1.3vh 2vw;
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   margin-top: 1.5vw;
 }
 
@@ -1079,7 +1080,7 @@ h1 {
 }
 #page16 {
   position: relative;
-  height: 110vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -1458,6 +1459,10 @@ footer h3 {
 .product-list li {
   margin-bottom: 5px;
   line-height: 1.7em;
+}
+
+.product-list li:last-child {
+  padding-bottom: 20px !important;
 }
 
 .product-list a {
@@ -2335,7 +2340,7 @@ body {
   background-color: var(--BG_L);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  padding: 20px 0;
+  padding-bottom: 20px;
 }
 /* 
 @media only screen and (max-width: 767px) {
