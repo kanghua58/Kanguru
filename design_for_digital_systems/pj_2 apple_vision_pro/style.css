@@ -858,7 +858,7 @@ h1 {
 }
 
 .right5 > h3 {
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   font-weight: 500;
   line-height: 1.5em;
   width: 100%;
@@ -1759,7 +1759,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
 .right-a4 > h3,
 .right-a6 > h3,
 .right-a8 > h3 {
-  font-size: min(18px, 1.5vw);
+  font-size: 1.3vw;
   font-weight: 500;
   line-height: 1.5em;
   width: 100%;
