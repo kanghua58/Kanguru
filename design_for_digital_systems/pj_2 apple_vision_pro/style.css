@@ -2473,3 +2473,17 @@ nav .desktop-nav.move-down li {
 .nav-container nav {
   transition: all 400ms ease;
 }
+
+/* 
+video::-webkit-media-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 10%;
+}
+
+video::-webkit-media-controls-enclosure {
+  display: flex;
+  justify-content: flex-end;
+} */
