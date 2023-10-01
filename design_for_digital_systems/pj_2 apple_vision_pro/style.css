@@ -1083,7 +1083,7 @@ h1 {
 }
 #page16 {
   position: relative;
-  height: 100vh;
+  height: 100vw;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -1717,7 +1717,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
   background-color: var(--BG_L);
   display: flex;
   position: relative;
-  height: 50vh;
+  height: 40vw;
   width: 100vw;
 }
 
