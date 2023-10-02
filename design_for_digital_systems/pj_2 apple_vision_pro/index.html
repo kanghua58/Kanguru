@@ -28,37 +28,72 @@ Bugs
 <body>
 
 
+      <!-- Search Container -->
+      <div class="search-container hide">
+        <div id="search">
+          <div class="search-bar">
+              <form action="">
+                  <input type="text" placeholder="Search apple.com">
+              </form>
+          </div>
+          <div class="link-close"></div>
 
-    <!-- <div class="mobile-search-container">
-        <div class="link-search"></div>
-        <div class="search-bar">
-            <form action="">
-                <input type="text" placeholder="Search apple.com">
-            </form>
-        </div>
-        <span class="cancel-btn">Cancel</span>
+          <div class="quick-links">
+              <h2>Quick Links</h2>
+              <ul>
 
-        <div class="quick-links">
-            <h2>Quick Links</h2>
-            <ul>
-                <li>
-                    <a href="#">Visiting an Apple Store FAQ</a>
-                </li>
-                <li>
-                    <a href="#">Shop Apple Store Online</a>
-                </li>
-                <li>
-                    <a href="#">Accessories</a>
-                </li>
-                <li>
-                    <a href="#">AirPods</a>
-                </li>
-                <li>
-                    <a href="#">AirTag</a>
-                </li>
-            </ul>
-        </div>
-    </div> -->
+                  <li>
+                      <a href="#">Find a Store</a>
+                  </li>
+                  <li>
+                      <a href="#">Apple Vision Pro</a>
+                  </li>
+                  <li>
+                      <a href="#">AirPods</a>
+                  </li>
+                  <li>
+                      <a href="#">AirTag</a>
+                  </li>
+                  <li>
+                      <a href="#">Apple Trade In</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </div>
+
+    <!-- Bag Container -->
+    <!-- <div class="bag-container hide">
+      <div class="link-bag"></div>
+      <div class="bag-message">
+        <h1>Your Bag is empty.</h1>
+        <p><a>Sign in</a>to see if you have any saved items</p>
+      </div>
+      <div class="link-close"></div> -->
+
+      <!-- <div class="profile-links">
+          <h2>My Profile</h2>
+          <ul>
+              <li>
+                <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#9e9e9e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line> <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path> <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline> <line x1="12" y1="22.08" x2="12" y2="12"></line> </g></svg>
+                <a href="#">Orders</a>
+              </li>
+              <li>
+                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#9e9e9e"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 6L7.5 5.25H16.5L17.25 6V19.3162L12 16.2051L6.75 19.3162V6ZM8.25 6.75V16.6838L12 14.4615L15.75 16.6838V6.75H8.25Z" fill="#9e9e9e"></path> </g></svg>
+                <a href="#">Your Saves</a>
+              </li>
+              <li>
+                <svg width="20px" height="20px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#9e9e9e" class="bi bi-gear-wide-connected"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434l.071-.286zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5zm0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78h4.723zM5.048 3.967c-.03.021-.058.043-.087.065l.087-.065zm-.431.355A4.984 4.984 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8 4.617 4.322zm.344 7.646.087.065-.087-.065z"></path> </g></svg>
+                <a href="#">Account</a>
+              </li>
+              <li>
+                <svg width="20px" height="20px" xmlns="http://www.w3.org/2000/svg" fill="#9e9e9e" viewBox="0 0 24 24"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></g></svg>
+                <a href="#">Sign in</a>
+              </li>
+          </ul>
+      </div>
+  </div> -->
+
 
     <!-- End of search container -->
 
@@ -66,25 +101,6 @@ Bugs
       <!-- Start of Navigation items -->
       <div class="nav-container">
         <nav>
-            <ul class="mobile-nav">
-                <li>
-                    <div class="menu-icon-container">
-                        <div class="menu-icon">
-                            <span class="line-1"></span>
-                            <span class="line-2"></span>
-                        </div>
-                    </div>
-                </li>
-
-                <li>
-                    <a href="#" class="link-logo"></a>
-                </li>
-
-                <li>
-                    <a href="" class="link-bag"></a>
-                </li>
-            </ul>
-
             <ul class="desktop-nav">
                 <li>
                     <a href="#" class="link-logo"></a>
@@ -130,10 +146,10 @@ Bugs
     </div>
     <!-- End of navigation menu items -->
         
-
+    <div class="overlay"></div>
     
     <!-- Start of action banner items -->
-    <div class="overlay"></div>
+    
 
     <div class="action-banner">
         <div class="banner-container">
@@ -142,41 +158,6 @@ Bugs
         </div>
     </div>
     <!-- End of action banner items -->
-    
-    <!-- start of search container -->
-
-    <div class="search-container hide">
-        <div class="link-search"></div>
-        <div class="search-bar">
-            <form action="">
-                <input type="text" placeholder="Search apple.com">
-            </form>
-        </div>
-        <div class="link-close"></div>
-
-        <div class="quick-links">
-            <h2>Quick Links</h2>
-            <ul>
-
-                <li>
-                    <a href="#">Find a Store</a>
-                </li>
-                <li>
-                    <a href="#">Apple Vision Pro</a>
-                </li>
-                <li>
-                    <a href="#">AirPods</a>
-                </li>
-                <li>
-                    <a href="#">AirTag</a>
-                </li>
-                <li>
-                    <a href="#">Apple Trade In</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
 
         <div id="main">
             
@@ -791,7 +772,7 @@ Bugs
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>
