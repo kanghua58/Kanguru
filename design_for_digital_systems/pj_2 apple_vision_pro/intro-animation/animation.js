@@ -1,25 +1,3 @@
-// const bagButton = document.querySelector("nav .desktop-nav .link-bag");
-// const bagCloseButton = document.querySelector(".bag-container .link-close");
-// const bagContainer = document.querySelector(".bag-container");
-
-// bagButton.addEventListener("click", () => {
-//     desktopNav.classList.add("hide");
-//     bagContainer.classList.remove("hide");
-//     overlay.classList.add("show");
-// })
-
-// bagCloseButton.addEventListener("click", () => {
-//     desktopNav.classList.remove("hide");
-//     bagContainer.classList.add("hide");
-//     overlay.classList.remove("show");
-// })
-
-// overlay.addEventListener("click", () => {
-//     desktopNav.classList.remove("hide");
-//     bagContainer.classList.add("hide");
-//     overlay.classList.remove("show");
-// })
-
 function loco(){
     gsap.registerPlugin(ScrollTrigger);
 
@@ -40,6 +18,8 @@ ScrollTrigger.scrollerProxy("#main", {
   getBoundingClientRect() {
     return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
   },
+  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
+  pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
 });
 
 // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
@@ -52,77 +32,45 @@ ScrollTrigger.refresh();
 loco()
 
 
-// Intro
 gsap.to("#intro>video",{
-  scrollTrigger:{
-      trigger:`#intro>video`,
-      start:`2% top`,
-      end:`bottom top`,
-      scroller:`#main`
-  },
-  onStart:()=>{
-      document.querySelector("#intro>video").play()
-  }
+    scrollTrigger:{
+        trigger:`#intro>video`,
+        start:`2% top`,
+        end:`bottom top`,
+        scroller:`#main`
+    },
+    onStart:()=>{
+        document.querySelector("#intro>video").play()
+    }
 })
 
 
 gsap.to("#intro",{
-  scrollTrigger:{
-      trigger:`#page`,
-      start:`top top`,
-      end:`bottom top`,
-      scroller:`#main`,
-      pin:true
-  }
+    scrollTrigger:{
+        trigger:`#page`,
+        start:`top top`,
+        end:`bottom top`,
+        scroller:`#main`,
+        pin:true
+    }
 })
 
 
 gsap.to("#intro-bottom",{
-  scrollTrigger:{
-      trigger:`#intro-bottom`,
-      start:`5% top`,
-      end:`bottom top`,
-      scroller:`#main`,
-      scrub:.5,
-  },
-  opacity:0
+    scrollTrigger:{
+        trigger:`#intro-bottom`,
+        start:`5% top`,
+        end:`bottom top`,
+        scroller:`#main`,
+        scrub:.5,
+    },
+    opacity:0
 })
 
 
 var tl0 = gsap.timeline({
-scrollTrigger:{
-    trigger:`#intro`,
-    start:`top top`,
-    scrub:1,
-    scroller:`#main`,
-    pin:true
-}
-})
-
-
-tl0.to("#intro>h3",{
-top:`-50%`
-})
-
-
-
-
-// Intro1
-
-gsap.to("#intro1-h1",{
-scrollTrigger:{
-    trigger:`#intro1-h1`,
-    start:`5% top`,
-    end:`bottom top`,
-    scroller:`#main`,
-    scrub:.5,
-},
-opacity:0
-})
-
-var tl = gsap.timeline({
   scrollTrigger:{
-      trigger:`#intro1`,
+      trigger:`#intro`,
       start:`top top`,
       scrub:1,
       scroller:`#main`,
@@ -131,46 +79,27 @@ var tl = gsap.timeline({
 })
 
 
-tl.to("#intro1>h1",{
+tl0.to("#intro>h3",{
   top:`-50%`
 })
 
 
 
-// Intro 2
 
-gsap.to("#intro2-h1",{
+gsap.to("#intro1-h1",{
   scrollTrigger:{
-      trigger:`#intro2-h1`,
+      trigger:`#intro1-h1`,
       start:`5% top`,
       end:`bottom top`,
       scroller:`#main`,
       scrub:.5,
   },
   opacity:0
-  })
-
-var tl1 = gsap.timeline({
-  scrollTrigger:{
-      trigger:`#intro2`,
-      start:`top top`,
-      scrub:1,
-      scroller:`#main`,
-      pin:true
-  }
 })
 
-
-tl1.to("#intro2>h1",{
-  top:`-50%`
-})
-
-
-// Page4
-
-var tl2 = gsap.timeline({
+var tl = gsap.timeline({
     scrollTrigger:{
-        trigger:`#page4`,
+        trigger:`#intro1`,
         start:`top top`,
         scrub:1,
         scroller:`#main`,
@@ -179,9 +108,28 @@ var tl2 = gsap.timeline({
 })
 
 
-tl2.to("#page4>#center-page4",{
+tl.to("#intro1>h1",{
     top:`-50%`
 })
+
+
+
+
+var tl1 = gsap.timeline({
+    scrollTrigger:{
+        trigger:`#intro2`,
+        start:`top top`,
+        scrub:1,
+        scroller:`#main`,
+        pin:true
+    }
+})
+
+
+tl1.to("#intro2>h1",{
+    top:`-50%`
+})
+
 
 
 
@@ -488,34 +436,33 @@ render();
 });
 
 function files(index) {
-  var data = `
-  ./images/Vision00001.png
-  ./images/Vision00001.png
-  ./images/Vision00002.png
-  ./images/Vision00003.png
-  ./images/Vision00004.png
-  ./images/Vision00005.png
-  ./images/Vision00006.png
-  ./images/Vision00007.png
-  ./images/Vision00008.png
-  ./images/Vision00009.png
-  ./images/Vision00010.png
-  ./images/Vision00011.png
-  ./images/Vision00012.png
-  ./images/Vision00013.png
-  ./images/Vision00014.png
-  ./images/Vision00015.png
-  ./images/Vision00016.png
-  ./images/Vision00017.png
-  ./images/Vision00018.png
-  ./images/Vision00019.png
-  ./images/Vision00020.png
-  ./images/Vision00021.png
-  ./images/Vision00022.png
-  ./images/Vision00023.png
-  ./images/Vision00024.png
-  ./images/Vision00025.png
-  `;
+var data = `
+..//images/Vision00001.png
+..//images/Vision00002.png
+..//images/Vision00003.png
+..//images/Vision00004.png
+..//images/Vision00005.png
+..//images/Vision00006.png
+..//images/Vision00007.png
+..//images/Vision00008.png
+..//images/Vision00009.png
+..//images/Vision00010.png
+..//images/Vision00011.png
+..//images/Vision00012.png
+..//images/Vision00013.png
+..//images/Vision00014.png
+..//images/Vision00015.png
+..//images/Vision00016.png
+..//images/Vision00017.png
+..//images/Vision00018.png
+..//images/Vision00019.png
+..//images/Vision00020.png
+..//images/Vision00021.png
+..//images/Vision00022.png
+..//images/Vision00023.png
+..//images/Vision00024.png
+..//images/Vision00025.png
+`;
 return data.split("\n")[index];
 }
 
@@ -631,35 +578,5 @@ gsap.to("#page23>img",{
   opacity:1
 })
 
-gsap.to("#page23>img",{
-  scrollTrigger:{
-    trigger:`#page23>img`,
-    start:`top bottom`,
-    end:`bottom 60%`,
-    scrub:.5,
-    scroller:`#main`
-  },
-  opacity:1
-})
 
-
-const searchButton = document.querySelector("nav .desktop-nav .link-search");
-const closeButton = document.querySelector(".search-container .link-close");
-const desktopNav = document.querySelector(".desktop-nav");
-const searchContainer = document.querySelector(".search-container");
-const overlay = document.querySelector(".overlay");
-
-searchButton.addEventListener("click", () => {
-    searchContainer.classList.remove("hide");
-    overlay.classList.add("show");
-})
-
-closeButton.addEventListener("click", () => {
-    searchContainer.classList.add("hide");
-    overlay.classList.remove("show");
-})
-
-overlay.addEventListener("click", () => {
-    searchContainer.classList.add("hide");
-    overlay.classList.remove("show");
-})
+console.log("Reached the end")
