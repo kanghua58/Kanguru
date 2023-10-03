@@ -1,10 +1,17 @@
 <!-- 
 TO-DO list
-  1. Control Button on top of the video
-  2. Animation as scrolling down on a video/image
-  3. Header Menu Contents
+  - Animation as scrolling down on a video/image
+      - download all the videos and photos to prevent glitch
+  
 
-Start of HTML codes -->
+Good to have:
+  - Control Button on top of the video
+  - Header Menu Contents
+
+
+-->
+
+<!-- Start of HTML codes  -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +23,7 @@ Start of HTML codes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./images/apple_logo2.png">
 </head>
 <body>
@@ -186,22 +192,22 @@ Start of HTML codes -->
 
         <div id="main">
             
-            <div id="page">
+            <div id="intro">
                 <video src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/hero/large_2x.mp4" muted></video>
-                <div id="page-bottom">
+                <div id="intro-bottom">
                     <h3>Introducing</h3>
                     <img src="https://www.apple.com/v/apple-vision-pro/a/images/overview/hero/apple_vision_pro_logo__ux94yix23r6y_large.png" alt="">
                 </div>
             </div>
 
-            <div id="page1">
+            <div id="intro1">
                 <video src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/foundation-spatial-computing/large.mp4" autoplay loop muted></video>
                 <div class="overlay-video"></div>
                 <h1>Welcome to the era of <br> spatial computing.</h1>
             </div>
           
             
-            <div id="page2">
+            <div id="intro2">
                 <video src="https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/foundation-digital-canvas/large.mp4" autoplay loop muted ></video>
                 <div class="overlay-video"></div>
                 <h1>Apple Vision Pro seamlessly blends <br> digital content with your physical space.</h1>
@@ -365,7 +371,7 @@ Start of HTML codes -->
             <button class="button-2">+ Learn more about design</button>
            </div>
 
-           <div class="carousel-container">
+           <!-- <div class="carousel-container">
             <div data-am-fadeshow="next-prev-navigation">
 
               <input type="radio" name="css-fadeshow" id="slide-1" />
@@ -402,7 +408,7 @@ Start of HTML codes -->
               </div>
           
             </div>            
-          </div>
+          </div> -->
 
           <div id="page-a1">
             <div class="left-a1">
@@ -797,9 +803,8 @@ Start of HTML codes -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js" integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js" integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
 
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 
 </body>
 </html>

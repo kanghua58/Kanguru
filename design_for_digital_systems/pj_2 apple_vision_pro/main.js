@@ -40,8 +40,6 @@ ScrollTrigger.scrollerProxy("#main", {
   getBoundingClientRect() {
     return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
   },
-  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-  pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
 });
 
 // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
@@ -54,22 +52,22 @@ ScrollTrigger.refresh();
 loco()
 
 
-gsap.to("#page>video",{
+gsap.to("#intro>video",{
     scrollTrigger:{
-        trigger:`#page>video`,
-        start:`2% top`,
+        trigger:`#intro>video`,
+        start:`1% top`,
         end:`bottom top`,
         scroller:`#main`
     },
     onStart:()=>{
-        document.querySelector("#page>video").play()
+        document.querySelector("#intro>video").play()
     }
 })
 
 
-gsap.to("#page",{
+gsap.to("#intro",{
     scrollTrigger:{
-        trigger:`#page`,
+        trigger:`#intro`,
         start:`top top`,
         end:`bottom top`,
         scroller:`#main`,
@@ -78,9 +76,9 @@ gsap.to("#page",{
 })
 
 
-gsap.to("#page-bottom",{
+gsap.to("#intro-bottom",{
     scrollTrigger:{
-        trigger:`#page-bottom`,
+        trigger:`#intro-bottom`,
         start:`5% top`,
         end:`bottom top`,
         scroller:`#main`,
@@ -93,16 +91,16 @@ gsap.to("#page-bottom",{
 
 var tl = gsap.timeline({
     scrollTrigger:{
-        trigger:`#page1`,
+        trigger:`#intro1`,
         start:`top top`,
-        scrub:1,
+        scrub:.3,
         scroller:`#main`,
         pin:true
     }
 })
 
 
-tl.to("#page1>h1",{
+tl.to("#intro1>h1",{
     top:`-50%`
 })
 
@@ -113,7 +111,7 @@ tl.to("#page1>h1",{
 
 var tl1 = gsap.timeline({
     scrollTrigger:{
-        trigger:`#page2`,
+        trigger:`#intro2`,
         start:`top top`,
         scrub:1,
         scroller:`#main`,
@@ -122,7 +120,7 @@ var tl1 = gsap.timeline({
 })
 
 
-tl1.to("#page2>h1",{
+tl1.to("#intro2>h1",{
     top:`-50%`
 })
 
@@ -449,33 +447,33 @@ render();
 });
 
 function files(index) {
-var data = `
-.//Apple vision canvas images/Vision00001.png
-.//Apple vision canvas images/Vision00002.png
-.//Apple vision canvas images/Vision00003.png
-.//Apple vision canvas images/Vision00004.png
-.//Apple vision canvas images/Vision00005.png
-.//Apple vision canvas images/Vision00006.png
-.//Apple vision canvas images/Vision00007.png
-.//Apple vision canvas images/Vision00008.png
-.//Apple vision canvas images/Vision00009.png
-.//Apple vision canvas images/Vision00010.png
-.//Apple vision canvas images/Vision00011.png
-.//Apple vision canvas images/Vision00012.png
-.//Apple vision canvas images/Vision00013.png
-.//Apple vision canvas images/Vision00014.png
-.//Apple vision canvas images/Vision00015.png
-.//Apple vision canvas images/Vision00016.png
-.//Apple vision canvas images/Vision00017.png
-.//Apple vision canvas images/Vision00018.png
-.//Apple vision canvas images/Vision00019.png
-.//Apple vision canvas images/Vision00020.png
-.//Apple vision canvas images/Vision00021.png
-.//Apple vision canvas images/Vision00022.png
-.//Apple vision canvas images/Vision00023.png
-.//Apple vision canvas images/Vision00024.png
-.//Apple vision canvas images/Vision00025.png
-`;
+  var data = `
+  .//Apple vision canvas images/Vision00001.png
+  .//Apple vision canvas images/Vision00002.png
+  .//Apple vision canvas images/Vision00003.png
+  .//Apple vision canvas images/Vision00004.png
+  .//Apple vision canvas images/Vision00005.png
+  .//Apple vision canvas images/Vision00006.png
+  .//Apple vision canvas images/Vision00007.png
+  .//Apple vision canvas images/Vision00008.png
+  .//Apple vision canvas images/Vision00009.png
+  .//Apple vision canvas images/Vision00010.png
+  .//Apple vision canvas images/Vision00011.png
+  .//Apple vision canvas images/Vision00012.png
+  .//Apple vision canvas images/Vision00013.png
+  .//Apple vision canvas images/Vision00014.png
+  .//Apple vision canvas images/Vision00015.png
+  .//Apple vision canvas images/Vision00016.png
+  .//Apple vision canvas images/Vision00017.png
+  .//Apple vision canvas images/Vision00018.png
+  .//Apple vision canvas images/Vision00019.png
+  .//Apple vision canvas images/Vision00020.png
+  .//Apple vision canvas images/Vision00021.png
+  .//Apple vision canvas images/Vision00022.png
+  .//Apple vision canvas images/Vision00023.png
+  .//Apple vision canvas images/Vision00024.png
+  .//Apple vision canvas images/Vision00025.png
+  `;
 return data.split("\n")[index];
 }
 
