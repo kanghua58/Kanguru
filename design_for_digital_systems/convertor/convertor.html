@@ -7,10 +7,10 @@
     <style>
       :root {
         --FF: "Karla";
-        --BGC: #f1f6f9;
-        --C1: #74829c;
-        --C2: #394867;
-        --C3: #212a3e;
+        --BGC: #f9f6f1;
+        --C1: #d9700080;
+        --C2: #5a220780;
+        --C3: #c44104;
       }
 
       * {
@@ -28,6 +28,8 @@
 
       body {
         background-color: var(--BGC);
+        background-image: url(https://th.bing.com/th/id/R.707a0b938dfc53a30ccff6f721129381?rik=F8bEFFRM%2f9%2f8mA&pid=ImgRaw&r=0);
+        background-repeat: repeat;
         padding: 20px;
         text-align: center;
         font-size: 20px;
@@ -50,7 +52,7 @@
       }
       .flex-container {
         width: 100%;
-        background-color: var(--BGC);
+        /* background-color: var(--BGC); */
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -58,8 +60,8 @@
       }
 
       .flex-box {
-        width: 300px;
-        height: 300px;
+        width: 80%;
+        height: auto;
         min-width: 250px;
         background-color: var(--C1);
         margin: 20px;
@@ -69,15 +71,18 @@
       span {
         color: var(--C3);
       }
+
+      img {
+        width: 83%;
+      }
     </style>
   </head>
   <body>
     <h1>Welcome to the United States</h1>
     <p>
-      Find here every unit that you're gonna use in your daily life <br />and
+      Find here every unit that you're gonna use in your daily life and
       <span>convert</span> the units easily
     </p>
-
     <div class="flex-container">
       <div class="flex-box">
         <h2>Clock</h2>
@@ -100,10 +105,26 @@
 
       <div class="flex-box">
         <h2>LB-KG convertor</h2>
-        <label for="pounds">LB:</label>
+        <label for="pounds">lb:</label>
         <input type="text" id="pounds" />
         <button onclick="convertToKilo()">Convert</button>
         <p id="result_kilo"></p>
+      </div>
+
+      <div class="flex-box">
+        <h2>OZ-G convertor</h2>
+        <label for="ounce">oz:</label>
+        <input type="text" id="ounce" />
+        <button onclick="convertToGram()">Convert</button>
+        <p id="result_gram"></p>
+      </div>
+
+      <div class="flex-box">
+        <h2>pint-L convertor</h2>
+        <label for="pint">pint:</label>
+        <input type="text" id="pint" />
+        <button onclick="convertToLiter()">Convert</button>
+        <p id="result_liter"></p>
       </div>
     </div>
 
@@ -116,7 +137,7 @@
         let celsius = ((fahrenheit - 32) * 5) / 9;
 
         document.getElementById("result_celcius").innerHTML =
-          fahrenheit + "°F = " + celsius.toFixed(2) + "°C";
+          fahrenheit + " °F = " + celsius.toFixed(2) + " °C";
       }
 
       function convertToKilo() {
@@ -125,7 +146,25 @@
         let kilo = pounds * 0.45359237;
 
         document.getElementById("result_kilo").innerHTML =
-          pounds + "LB = " + kilo.toFixed(2) + "KG";
+          pounds + " lb = " + kilo.toFixed(2) + " kg";
+      }
+
+      function convertToGram() {
+        let ounce = parseFloat(document.getElementById("ounce").value);
+
+        let gram = ounce * 28.35;
+
+        document.getElementById("result_gram").innerHTML =
+          ounce + " oz = " + gram.toFixed(2) + " g";
+      }
+
+      function convertToLiter() {
+        let pint = parseFloat(document.getElementById("pint").value);
+
+        let liter = pint * 0.47;
+
+        document.getElementById("result_liter").innerHTML =
+          pint + " pint = " + liter.toFixed(2) + " liter";
       }
     </script>
   </body>
