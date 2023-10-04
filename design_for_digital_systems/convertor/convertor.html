@@ -8,9 +8,9 @@
       :root {
         --FF: "Karla";
         --BGC: #f9f6f1;
-        --C1: #d9700080;
+        --C1: #c98a249e;
         --C2: #5a220780;
-        --C3: #c44104;
+        --C3: #cd801370;
       }
 
       * {
@@ -42,10 +42,17 @@
         color: var(--BGC);
         background-color: var(--C3);
         font-size: 20px;
+        border: none;
       }
 
-      input {
-        color: var(--C3) !important;
+      button:hover,
+      button:focus,
+      button:active {
+        text-decoration: underline;
+      }
+
+      .flex-container input {
+        color: #7e2f08;
         width: 50px;
         font-size: 20px;
         border: none;
@@ -69,7 +76,8 @@
       }
 
       span {
-        color: var(--C3);
+        color: var(--C2);
+        font-weight: 700;
       }
 
       img {
@@ -80,8 +88,8 @@
   <body>
     <h1>Welcome to the United States</h1>
     <p>
-      Find here every unit that you're gonna use in your daily life and
-      <span>convert</span> the units easily
+      Find here every unit <br />in your daily life <br />and
+      <span>convert</span> them easily
     </p>
     <div class="flex-container">
       <div class="flex-box">
