@@ -43,7 +43,7 @@
       }
 
       input {
-        color: var(--C3);
+        color: var(--C3) !important;
         width: 50px;
         font-size: 20px;
         border: none;
@@ -63,6 +63,7 @@
         min-width: 250px;
         background-color: var(--C1);
         margin: 20px;
+        padding: 20px;
       }
 
       span {
@@ -76,7 +77,19 @@
       Find here every unit that you're gonna use in your daily life <br />and
       <span>convert</span> the units easily
     </p>
+
     <div class="flex-container">
+      <div class="flex-box">
+        <h2>Clock</h2>
+        <label for="clock">Current Time</label>
+        <button
+          onclick="document.getElementById('result_time').innerHTML=Date()"
+        >
+          Check
+        </button>
+        <p id="result_time"></p>
+      </div>
+
       <div class="flex-box">
         <h2>F-C convertor</h2>
         <label for="fahrenheit">F:</label>
