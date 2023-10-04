@@ -20,187 +20,176 @@
 //     overlay.classList.remove("show");
 // })
 
-function loco(){
-    gsap.registerPlugin(ScrollTrigger);
+function loco() {
+  gsap.registerPlugin(ScrollTrigger);
 
-// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+  // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true
-});
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-locoScroll.on("scroll", ScrollTrigger.update);
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true,
+  });
+  // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+  locoScroll.on("scroll", ScrollTrigger.update);
 
-// tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
-ScrollTrigger.scrollerProxy("#main", {
-  scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
-});
+  // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
+  ScrollTrigger.scrollerProxy("#main", {
+    scrollTop(value) {
+      return arguments.length
+        ? locoScroll.scrollTo(value, 0, 0)
+        : locoScroll.scroll.instance.scroll.y;
+    }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    },
+  });
 
-// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-ScrollTrigger.refresh();
-
+  // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+  ScrollTrigger.refresh();
 }
-loco()
-
+loco();
 
 // Intro
-gsap.to("#intro>video",{
-  scrollTrigger:{
-      trigger:`#intro>video`,
-      start:`2% top`,
-      end:`bottom top`,
-      scroller:`#main`
+gsap.to("#intro>video", {
+  scrollTrigger: {
+    trigger: `#intro>video`,
+    start: `2% top`,
+    end: `bottom top`,
+    scroller: `#main`,
   },
-  onStart:()=>{
-      document.querySelector("#intro>video").play()
-  }
-})
-
-
-gsap.to("#intro",{
-  scrollTrigger:{
-      trigger:`#page`,
-      start:`top top`,
-      end:`bottom top`,
-      scroller:`#main`,
-      pin:true
-  }
-})
-
-
-gsap.to("#intro-bottom",{
-  scrollTrigger:{
-      trigger:`#intro-bottom`,
-      start:`5% top`,
-      end:`bottom top`,
-      scroller:`#main`,
-      scrub:.5,
+  onStart: () => {
+    document.querySelector("#intro>video").play();
   },
-  opacity:0
-})
+});
 
+gsap.to("#intro", {
+  scrollTrigger: {
+    trigger: `#page`,
+    start: `top top`,
+    end: `bottom top`,
+    scroller: `#main`,
+    pin: true,
+  },
+});
+
+gsap.to("#intro-bottom", {
+  scrollTrigger: {
+    trigger: `#intro-bottom`,
+    start: `5% top`,
+    end: `bottom top`,
+    scroller: `#main`,
+    scrub: 0.5,
+  },
+  opacity: 0,
+});
 
 var tl0 = gsap.timeline({
-scrollTrigger:{
-    trigger:`#intro`,
-    start:`top top`,
-    scrub:1,
-    scroller:`#main`,
-    pin:true
-}
-})
+  scrollTrigger: {
+    trigger: `#intro`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `#main`,
+    pin: true,
+  },
+});
 
-
-tl0.to("#intro>h3",{
-top:`-50%`
-})
-
-
-
+tl0.to("#intro>h3", {
+  top: `-50%`,
+});
 
 // Intro1
 
-gsap.to("#intro1-h1",{
-scrollTrigger:{
-    trigger:`#intro1-h1`,
-    start:`5% top`,
-    end:`bottom top`,
-    scroller:`#main`,
-    scrub:.5,
-},
-opacity:0
-})
+gsap.to("#intro1-h1", {
+  scrollTrigger: {
+    trigger: `#intro1-h1`,
+    start: `5% top`,
+    end: `bottom top`,
+    scroller: `#main`,
+    scrub: 0.5,
+  },
+  opacity: 0,
+});
 
 var tl = gsap.timeline({
-  scrollTrigger:{
-      trigger:`#intro1`,
-      start:`top top`,
-      scrub:1,
-      scroller:`#main`,
-      pin:true
-  }
-})
+  scrollTrigger: {
+    trigger: `#intro1`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `#main`,
+    pin: true,
+  },
+});
 
-
-tl.to("#intro1>h1",{
-  top:`-50%`
-})
-
-
+tl.to("#intro1>h1", {
+  top: `-50%`,
+});
 
 // Intro 2
 
-gsap.to("#intro2-h1",{
-  scrollTrigger:{
-      trigger:`#intro2-h1`,
-      start:`5% top`,
-      end:`bottom top`,
-      scroller:`#main`,
-      scrub:.5,
+gsap.to("#intro2-h1", {
+  scrollTrigger: {
+    trigger: `#intro2-h1`,
+    start: `5% top`,
+    end: `bottom top`,
+    scroller: `#main`,
+    scrub: 0.5,
   },
-  opacity:0
-  })
+  opacity: 0,
+});
 
 var tl1 = gsap.timeline({
-  scrollTrigger:{
-      trigger:`#intro2`,
-      start:`top top`,
-      scrub:1,
-      scroller:`#main`,
-      pin:true
-  }
-})
+  scrollTrigger: {
+    trigger: `#intro2`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `#main`,
+    pin: true,
+  },
+});
 
-
-tl1.to("#intro2>h1",{
-  top:`-50%`
-})
-
+tl1.to("#intro2>h1", {
+  top: `-50%`,
+});
 
 // Page4
 
 var tl2 = gsap.timeline({
-    scrollTrigger:{
-        trigger:`#page4`,
-        start:`top top`,
-        scrub:1,
-        scroller:`#main`,
-        pin:true
-    }
-})
-
-
-tl2.to("#page4>#center-page4",{
-    top:`-50%`
-})
-
-
-
-function canvas(){
-    const canvas = document.querySelector("#page7>canvas");
-const context = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-
-window.addEventListener("resize", function () {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  render();
+  scrollTrigger: {
+    trigger: `#page4`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `#main`,
+    pin: true,
+  },
 });
 
-function files(index) {
-  var data = `
+tl2.to("#page4>#center-page4", {
+  top: `-50%`,
+});
+
+function canvas() {
+  const canvas = document.querySelector("#page7>canvas");
+  const context = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
+  });
+
+  function files(index) {
+    var data = `
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0000.jpg
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0001.jpg
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0002.jpg
@@ -401,94 +390,90 @@ function files(index) {
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0198.jpg
   https://www.apple.com/105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/360/large/0199.jpg
  `;
-  return data.split("\n")[index];
-}
+    return data.split("\n")[index];
+  }
 
-const frameCount = 198;
+  const frameCount = 198;
 
-const images = [];
-const imageSeq = {
-  frame: 1,
-};
+  const images = [];
+  const imageSeq = {
+    frame: 1,
+  };
 
-for (let i = 0; i < frameCount; i++) {
-  const img = new Image();
-  img.src = files(i);
-  images.push(img);
-}
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = files(i);
+    images.push(img);
+  }
 
-gsap.to(imageSeq, {
-  frame: frameCount - 1,
-  snap: "frame",
-  ease: `none`,
-  scrollTrigger: {
-    scrub: 0.15,
-    trigger: `#page7>canvas`,
+  gsap.to(imageSeq, {
+    frame: frameCount - 1,
+    snap: "frame",
+    ease: `none`,
+    scrollTrigger: {
+      scrub: 0.15,
+      trigger: `#page7>canvas`,
+      //   set start end according to preference
+      start: `top top`,
+      end: `600% top`,
+      scroller: `#main`,
+    },
+    onUpdate: render,
+  });
+
+  images[1].onload = render;
+
+  function render() {
+    scaleImage(images[imageSeq.frame], context);
+  }
+
+  function scaleImage(img, ctx) {
+    var canvas = ctx.canvas;
+    var hRatio = canvas.width / img.width;
+    var vRatio = canvas.height / img.height;
+    var ratio = Math.min(hRatio, vRatio);
+    var centerShift_x = (canvas.width - img.width * ratio) / 2;
+    var centerShift_y = (canvas.height - img.height * ratio) / 2;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      centerShift_x,
+      centerShift_y,
+      img.width * ratio,
+      img.height * ratio
+    );
+  }
+  ScrollTrigger.create({
+    trigger: "#page7>canvas",
+    pin: true,
+    // markers:true,
+    scroller: `#main`,
     //   set start end according to preference
     start: `top top`,
     end: `600% top`,
-    scroller: `#main`,
-  },
-  onUpdate: render,
-});
-
-images[1].onload = render;
-
-function render() {
-  scaleImage(images[imageSeq.frame], context);
-}
-
-function scaleImage(img, ctx) {
-  var canvas = ctx.canvas;
-  var hRatio = canvas.width / img.width;
-  var vRatio = canvas.height / img.height;
-  var ratio = Math.min(hRatio, vRatio);
-  var centerShift_x = (canvas.width - img.width * ratio) / 2;
-  var centerShift_y = (canvas.height - img.height * ratio) / 2;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(
-    img,
-    0,
-    0,
-    img.width,
-    img.height,
-    centerShift_x,
-    centerShift_y,
-    img.width * ratio,
-    img.height * ratio
-  );
-}
-ScrollTrigger.create({
-
-  trigger: "#page7>canvas",
-  pin: true,
-  // markers:true,
-  scroller: `#main`,
-//   set start end according to preference
-  start: `top top`,
-  end: `600% top`,
-});
+  });
 }
 canvas();
 
-
-
-function canvas1(){
+function canvas1() {
   const canvas = document.querySelector("#page18>canvas");
-const context = canvas.getContext("2d");
+  const context = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
+  window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
+  });
 
-window.addEventListener("resize", function () {
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-render();
-});
-
-function files(index) {
-  var data = `
+  function files(index) {
+    var data = `
   ./images/Vision00001.png
   ./images/Vision00001.png
   ./images/Vision00002.png
@@ -516,132 +501,124 @@ function files(index) {
   ./images/Vision00024.png
   ./images/Vision00025.png
   `;
-return data.split("\n")[index];
-}
+    return data.split("\n")[index];
+  }
 
-const frameCount = 25;
+  const frameCount = 25;
 
-const images = [];
-const imageSeq = {
-frame: 1,
-};
+  const images = [];
+  const imageSeq = {
+    frame: 1,
+  };
 
-for (let i = 0; i < frameCount; i++) {
-const img = new Image();
-img.src = files(i);
-images.push(img);
-}
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = files(i);
+    images.push(img);
+  }
 
-gsap.to(imageSeq, {
-frame: frameCount - 1,
-snap: "frame",
-ease: `none`,
-scrollTrigger: {
-  scrub: 0.15,
-  trigger: `#page18`,
-  //   set start end according to preference
-  start: `top top`,
-  end: `80% top`,
-  scroller: `#main`,
-},
-onUpdate: render,
-});
+  gsap.to(imageSeq, {
+    frame: frameCount - 1,
+    snap: "frame",
+    ease: `none`,
+    scrollTrigger: {
+      scrub: 0.15,
+      trigger: `#page18`,
+      //   set start end according to preference
+      start: `top top`,
+      end: `80% top`,
+      scroller: `#main`,
+    },
+    onUpdate: render,
+  });
 
-images[1].onload = render;
+  images[1].onload = render;
 
-function render() {
-scaleImage(images[imageSeq.frame], context);
-}
+  function render() {
+    scaleImage(images[imageSeq.frame], context);
+  }
 
-function scaleImage(img, ctx) {
-var canvas = ctx.canvas;
-var hRatio = canvas.width / img.width;
-var vRatio = canvas.height / img.height;
-var ratio = Math.max(hRatio, vRatio);
-var centerShift_x = (canvas.width - img.width * ratio) / 2;
-var centerShift_y = (canvas.height - img.height * ratio) / 2;
-ctx.clearRect(0, 0, canvas.width, canvas.height);
-ctx.drawImage(
-  img,
-  0,
-  0,
-  img.width,
-  img.height,
-  centerShift_x,
-  centerShift_y,
-  img.width * ratio,
-  img.height * ratio
-);
-}
-ScrollTrigger.create({
-
-trigger: "#page18",
-pin: true,
-// markers:true,
-scroller: `#main`,
-//   set start end according to preference
-start: `top top`,
-end: `80% top`,
-});
+  function scaleImage(img, ctx) {
+    var canvas = ctx.canvas;
+    var hRatio = canvas.width / img.width;
+    var vRatio = canvas.height / img.height;
+    var ratio = Math.max(hRatio, vRatio);
+    var centerShift_x = (canvas.width - img.width * ratio) / 2;
+    var centerShift_y = (canvas.height - img.height * ratio) / 2;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      centerShift_x,
+      centerShift_y,
+      img.width * ratio,
+      img.height * ratio
+    );
+  }
+  ScrollTrigger.create({
+    trigger: "#page18",
+    pin: true,
+    // markers:true,
+    scroller: `#main`,
+    //   set start end according to preference
+    start: `top top`,
+    end: `80% top`,
+  });
 }
 canvas1();
 
-
-
 var tl3 = gsap.timeline({
-  scrollTrigger:{
-      trigger:`#page21`,
-      start:`top top`,
-      scrub:1,
-      scroller:`#main`,
-      pin:true
-  }
-})
+  scrollTrigger: {
+    trigger: `#page21`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `#main`,
+    pin: true,
+  },
+});
 
-
-tl3.to("#page21>#troff",{
-  opacity:0
-})
+tl3.to("#page21>#troff", {
+  opacity: 0,
+});
 
 var tl4 = gsap.timeline({
-  scrollTrigger:{
-      trigger:`#page22`,
-      start:`top top`,
-      scrub:1,
-      scroller:`#main`,
-      pin:true
-  }
-})
-
-
-tl4.to("#page22>#snroff",{
-  opacity:0
-})
-
-
-
-gsap.to("#page23>img",{
-  scrollTrigger:{
-    trigger:`#page23>img`,
-    start:`top bottom`,
-    end:`bottom 60%`,
-    scrub:.5,
-    scroller:`#main`
+  scrollTrigger: {
+    trigger: `#page22`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `#main`,
+    pin: true,
   },
-  opacity:1
-})
+});
 
-gsap.to("#page23>img",{
-  scrollTrigger:{
-    trigger:`#page23>img`,
-    start:`top bottom`,
-    end:`bottom 60%`,
-    scrub:.5,
-    scroller:`#main`
+tl4.to("#page22>#snroff", {
+  opacity: 0,
+});
+
+gsap.to("#page23>img", {
+  scrollTrigger: {
+    trigger: `#page23>img`,
+    start: `top bottom`,
+    end: `bottom 60%`,
+    scrub: 0.5,
+    scroller: `#main`,
   },
-  opacity:1
-})
+  opacity: 1,
+});
 
+gsap.to("#page23>img", {
+  scrollTrigger: {
+    trigger: `#page23>img`,
+    start: `top bottom`,
+    end: `bottom 60%`,
+    scrub: 0.5,
+    scroller: `#main`,
+  },
+  opacity: 1,
+});
 
 const searchButton = document.querySelector("nav .desktop-nav .link-search");
 const closeButton = document.querySelector(".search-container .link-close");
@@ -650,16 +627,16 @@ const searchContainer = document.querySelector(".search-container");
 const overlay = document.querySelector(".overlay");
 
 searchButton.addEventListener("click", () => {
-    searchContainer.classList.remove("hide");
-    overlay.classList.add("show");
-})
+  searchContainer.classList.remove("hide");
+  overlay.classList.add("show");
+});
 
 closeButton.addEventListener("click", () => {
-    searchContainer.classList.add("hide");
-    overlay.classList.remove("show");
-})
+  searchContainer.classList.add("hide");
+  overlay.classList.remove("show");
+});
 
 overlay.addEventListener("click", () => {
-    searchContainer.classList.add("hide");
-    overlay.classList.remove("show");
-})
+  searchContainer.classList.add("hide");
+  overlay.classList.remove("show");
+});
