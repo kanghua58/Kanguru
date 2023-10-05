@@ -171,7 +171,6 @@ html {
   color: white;
 }
 
-p,
 h1,
 h2,
 h3,
@@ -185,7 +184,10 @@ textarea .page-content-wrapper * {
 }
 
 p {
-  margin-top: 40px;
+  margin-top: 50px;
+  text-align: justify;
+  margin-left: 20px;
+  line-height: 1.4;
 }
 
 h1 {
@@ -397,4 +399,9 @@ a:active {
 
 .project {
   background-color: rgb(40, 40, 40);
+}
+
+span {
+  color: #000000;
+  font-weight: 700;
 }
