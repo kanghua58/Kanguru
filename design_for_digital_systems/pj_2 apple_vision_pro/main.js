@@ -20,25 +20,28 @@
 //     overlay.classList.remove("show");
 // })
 
+
+
+
 function loco() {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+  // using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
 
   const locoScroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
   });
-  // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+  // each time Locomotive Scroll updates, tell ScrollTrigger to synchronize position
   locoScroll.on("scroll", ScrollTrigger.update);
 
-  // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
+  // tell ScrollTrigger to use these proxy methods for the "#main" element
   ScrollTrigger.scrollerProxy("#main", {
     scrollTop(value) {
       return arguments.length
         ? locoScroll.scrollTo(value, 0, 0)
         : locoScroll.scroll.instance.scroll.y;
-    }, // we don't have to define a scrollLeft because we're only scrolling vertically.
+    }, 
     getBoundingClientRect() {
       return {
         top: 0,
@@ -49,13 +52,17 @@ function loco() {
     },
   });
 
-  // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
+  // each time the window updates, refresh ScrollTrigger and then update LocomotiveScroll.
   ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 
-  // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+  // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll
   ScrollTrigger.refresh();
 }
 loco();
+
+
+// The primary purpose of the above code is to set up a proxy
+// allowing ScrollTrigger to either retrieve or set the scroll position of LocomotiveScroll
 
 // Intro
 gsap.to("#intro>video", {
@@ -102,7 +109,8 @@ var tl0 = gsap.timeline({
 });
 
 tl0.to("#intro>h3", {
-  top: `-50%`,
+  top: `-10%`,
+  opacity: 0, 
 });
 
 // Intro1
@@ -129,7 +137,8 @@ var tl = gsap.timeline({
 });
 
 tl.to("#intro1>h1", {
-  top: `-50%`,
+  top: `-10%`,
+  opacity: 0, 
 });
 
 // Intro 2
@@ -156,7 +165,8 @@ var tl1 = gsap.timeline({
 });
 
 tl1.to("#intro2>h1", {
-  top: `-50%`,
+  top: `-10%`,
+  opacity: 0, 
 });
 
 // Page4
@@ -172,8 +182,95 @@ var tl2 = gsap.timeline({
 });
 
 tl2.to("#page4>#center-page4", {
-  top: `-50%`,
+  top: `-10%`,
+  opacity: 0, 
 });
+
+
+// Page-a3
+
+var tla3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: `#page-a3`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `#main`,
+    pin: true,
+  },
+});
+
+tla3.to("#page-a3>#center-page-a3", {
+  top: `-10%`,
+  opacity: 0, 
+});
+
+tla3.to("#page-a3 .overlay-video", {
+  display: "none"
+});
+
+tla3.to("#page-a3", {
+  paddingLeft: `80px`,
+  paddingRight: `80px`,
+});
+
+
+// Page-a5
+
+var tla5 = gsap.timeline({
+  scrollTrigger: {
+    trigger: `#page-a5`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `#main`,
+    pin: true,
+  },
+});
+
+tla5.to("#page-a5>#center-page-a5", {
+  top: `-10%`,
+  opacity: 0, 
+});
+
+tla5.to("#page-a5 .overlay-video", {
+  display: "none"
+});
+
+tla5.to("#page-a5", {
+  paddingLeft: `80px`,
+  paddingRight: `80px`,
+});
+
+// Page-a7
+
+var tla7 = gsap.timeline({
+  scrollTrigger: {
+    trigger: `#page-a7`,
+    start: `top top`,
+    scrub: 1,
+    scroller: `#main`,
+    pin: true,
+  },
+});
+
+
+tla7.to("#page-a7>#center-page-a7", {
+  top: `-10%`,
+  opacity: 0, 
+});
+
+tla7.to("#page-a7 .overlay-video", {
+  display: "none"
+});
+
+tla7.to("#page-a7", {
+  paddingLeft: `80px`,
+  paddingRight: `80px`,
+});
+
+
+
+
+// Page7 - Vision Feature Animation
 
 function canvas() {
   const canvas = document.querySelector("#page7>canvas");
@@ -459,6 +556,7 @@ function canvas() {
 }
 canvas();
 
+
 function canvas1() {
   const canvas = document.querySelector("#page18>canvas");
   const context = canvas.getContext("2d");
@@ -569,6 +667,7 @@ function canvas1() {
   });
 }
 canvas1();
+
 
 var tl3 = gsap.timeline({
   scrollTrigger: {

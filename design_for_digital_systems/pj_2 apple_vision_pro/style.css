@@ -1045,18 +1045,19 @@ h1 {
   background-color: var(--BG_L2);
 }
 #page8 > h1 {
-  width: 20%;
+  width: 16%;
   top: 50%;
   transform: translateY(-50%);
   left: 10%;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   color: var(--FC_FADE2);
   z-index: 99;
   position: absolute;
-  font-weight: 600;
+  font-weight: 500;
 }
 #page8 > h1 > span {
   color: var(--FC_L);
+  font-weight: 600;
 }
 #page9 {
   position: relative;
@@ -1065,15 +1066,15 @@ h1 {
   background-color: var(--BG_L2);
 }
 #page9 > h1 {
-  width: 20%;
+  width: 16%;
   top: 50%;
   transform: translateY(-50%);
   right: 10%;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   color: var(--FC_FADE2);
   z-index: 99;
   position: absolute;
-  font-weight: 600;
+  font-weight: 500;
 }
 #page9 > h1 > span {
   color: var(--FC_L);
@@ -1085,15 +1086,15 @@ h1 {
   background-color: var(--BG_L2);
 }
 #page10 > h1 {
-  width: 20%;
+  width: 16%;
   top: 50%;
   transform: translateY(-50%);
   left: 10%;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   color: var(--FC_FADE2);
   z-index: 99;
   position: absolute;
-  font-weight: 600;
+  font-weight: 500;
 }
 #page10 > h1 > span {
   color: var(--FC_L);
@@ -1105,15 +1106,15 @@ h1 {
   background-color: var(--BG_L2);
 }
 #page11 > h1 {
-  width: 20%;
+  width: 16%;
   top: 50%;
   transform: translateY(-50%);
   right: 10%;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   color: var(--FC_FADE2);
   z-index: 99;
   position: absolute;
-  font-weight: 600;
+  font-weight: 500;
 }
 #page11 > h1 > span {
   color: var(--FC_L);
@@ -1125,15 +1126,15 @@ h1 {
   background-color: var(--BG_L2);
 }
 #page12 > h1 {
-  width: 20%;
+  width: 16%;
   top: 50%;
   transform: translateY(-50%);
   left: 10%;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   color: var(--FC_FADE2);
   z-index: 99;
   position: absolute;
-  font-weight: 600;
+  font-weight: 500;
 }
 #page12 > h1 > span {
   color: var(--FC_L);
@@ -1145,15 +1146,15 @@ h1 {
   background-color: var(--BG_L2);
 }
 #page13 > h1 {
-  width: 20%;
+  width: 16%;
   top: 50%;
   transform: translateY(-50%);
   right: 10%;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   color: var(--FC_FADE2);
   z-index: 99;
   position: absolute;
-  font-weight: 600;
+  font-weight: 500;
 }
 #page13 > h1 > span {
   color: var(--FC_L);
@@ -1575,8 +1576,14 @@ h1 {
 }
 
 /* Footer */
+#footer {
+  z-index: 1000000;
+  display: block;
+  overflow: visible;
+  background-color: var(--BG_L2);
+}
 
-footer a {
+#footer a {
   text-decoration: none;
 }
 
@@ -1590,11 +1597,11 @@ footer a {
   color: var(--BLUE);
 }
 
-footer a:hover {
+#footer a:hover {
   text-decoration: underline;
 }
 
-footer {
+#footer {
   padding: 0 22px;
   padding-bottom: 21px;
   overflow: hidden;
@@ -1608,21 +1615,22 @@ footer {
   margin-top: 0;
 }
 
-footer .footer-info {
+#footer .footer-info {
   padding-top: 10px;
 }
 
-footer .footer-info ol {
+#footer .footer-info ol {
   padding-left: 15px;
 }
 
-footer .footer-info p {
+#footer .footer-info p {
   line-height: 1.5em;
   font-size: 0.9vw;
   padding-top: 10px;
 }
 
 .footer-content {
+  padding-top: 30px;
   max-width: 80%;
   margin: 0 auto;
 }
@@ -1641,7 +1649,7 @@ input[type="checkbox"] {
   display: none;
 }
 
-footer h3 {
+#footer h3 {
   color: var(--FC_L);
   font-size: var(--FS_FOTTER);
   font-weight: 600;
@@ -1830,7 +1838,7 @@ input[type="checkbox"]:checked + .col-section h3::after {
 #center-page-a3 > h1,
 #center-page-a5 > h1,
 #center-page-a7 > h1 {
-  font-size: 5vw;
+  font-size: 4vw;
   line-height: 1em;
 }
 
