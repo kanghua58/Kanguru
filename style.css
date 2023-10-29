@@ -405,6 +405,9 @@ a:active {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 572px) {
+  main {
+    width: 92%;
+  }
   .name {
     display: none;
     color: transparent;
