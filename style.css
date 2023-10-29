@@ -460,4 +460,7 @@ a:active {
   footer .contact li {
     margin-right: 5px;
   }
+  .self-intro {
+    margin-right: 0px;
+  }
 }
