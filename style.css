@@ -440,4 +440,11 @@ a:active {
     display: none;
     color: transparent;
   }
+  footer .contact li a {
+    letter-spacing: 1px;
+    font-size: 0.7em;
+  }
+  footer .contact li {
+    margin-right: 5px;
+  }
 }
