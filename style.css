@@ -409,9 +409,19 @@ a:active {
     display: none;
     color: transparent;
   }
+
   .col9,
   .col6 {
     width: 100%;
+  }
+  header {
+    justify-content: center;
+  }
+  header .navbar {
+    position: relative;
+    justify-content: center;
+    left: 0px;
+    right: 0px;
   }
 }
 
