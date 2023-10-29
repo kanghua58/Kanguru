@@ -265,7 +265,7 @@ main a {
 footer {
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 65px;
   width: 100%;
   background-color: var(--FOOTER-BACKGROUND);
   color: var(--FOOTER-FONTCOLOR);
@@ -413,31 +413,6 @@ a:active {
   .col6 {
     width: 100%;
   }
-
-  footer .pattent {
-    display: none;
-    color: transparent;
-  }
-
-  .contact {
-    margin-right: 0;
-    padding-right: 0;
-  }
-  .contact li {
-    margin-right: 15px;
-  }
-
-  .contact li:last-child {
-    margin-right: 0px;
-  }
-
-  footer {
-    justify-content: center;
-  }
-
-  .contact {
-    right: 0px;
-  }
 }
 
 @media screen and (max-width: 660px) {
@@ -450,8 +425,9 @@ a:active {
     justify-content: center;
   }
 
-  .contact {
-    right: 0px;
+  footer .contact {
+    margin-left: 80px;
+    justify-content: space-around;
   }
 }
 
